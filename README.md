@@ -21,3 +21,9 @@ See:
 - `nairobi_heatwave_economic_loss_2023_2024.csv`: Synthetic loss data.
 - `heatwave_economic_loss.png`: Temps vs. losses plot.
 - `economic_analysis.py`: Full code.
+
+## Drought Impact Update (March 12, 2025)
+Added drought loss analysis—droughts cost Kenyan farmers $0.85M (2023-2024), averaging $0.06M per drought month. See:
+- `kenya_drought_impact_2023_2024.csv`: Synthetic data.
+- `drought_economic_loss.png`: Rainfall vs. losses plot.
+- `drought_analysis.py`: Full code.
