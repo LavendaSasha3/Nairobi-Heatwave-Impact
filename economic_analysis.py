@@ -20,16 +20,16 @@ avg_loss_heatwave = df_econ.loc[heatwave_months, "Economic Loss ($M)"].mean()
 print(f"Average Loss During Heatwaves: ${avg_loss_heatwave:.2f}M")
 
 # Plot
-ds = xr.open_dataset("C:/Users/FETO/Downloads/Kenya_Heatwave_Era5_Data.nc")
+ds = xr.open_dataset("C:/Users/FETO/Downloads/era5_kenya_2023_2024.nc")
 tasmax = ds["t2m"].resample(valid_time="1D").max() - 273.15
 tasmax_nairobi = tasmax.sel(latitude=-1.29, longitude=36.82, method="nearest")
 df_econ["Date"] = pd.to_datetime(df_econ["Date"])
 
 fig, ax1 = plt.subplots(figsize=(12, 5))
-ax1.plot(tasmax_nairobi.valid_time, tasmax_nairobi, label="Nairobi Max Temp", color="blue")
+ax1.plot(tasmax_nairobi.valid_time, tasmax_nairobi, label="Nairobi Max Temp", color="purple")
 ax1.set_xlabel("Time")
-ax1.set_ylabel("Temperature (°C)", color="blue")
-ax1.tick_params(axis="y", labelcolor="blue")
+ax1.set_ylabel("Temperature (°C)", color="purple")
+ax1.tick_params(axis="y", labelcolor="purple")
 ax1.legend(loc="upper left")
 
 ax2 = ax1.twinx()
